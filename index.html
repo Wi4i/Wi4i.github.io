@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Корреляция</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<style type="text/css">
+		input, .ceil, .ceil-disabled {
+			/*height: 50px;
+			width: 150px;*/
+		}
+
+		.menuX {
+			border: 5px solid teal;
+			background: white; 
+		}
+		.menuY {
+			border: 5px solid olive;
+			background: white;
+		}
+
+		.ceil-disabled {
+			background: transparent;
+			border: 5px solid transparent;
+		}
+
+		.ceilV {
+			border: 5px solid gray;
+		}
+
+		.ceilX {
+			border: 5px solid teal;
+		}
+
+		.ceilY {
+			border: 5px solid olive;
+		}
+
+		.ceilY2 {
+			border: 5px solid olive;
+			width:150px;
+			background:white;
+		}
+
+		.ceilY3 {
+			border: 5px solid teal;
+			width:150px;
+			background:white;
+		}
+
+		.caption {
+			margin-top: 10px;
+			margin-left: 10px;
+			border: 2px solid;
+
+		}
+
+		.Pk {
+			border: 5px solid ;
+			border-color: rgb(160, 218, 153);
+			background:white;
+		}
+		.Pi {
+			border: 5px solid ;
+			border-color: rgb(160, 218, 153);
+			background:white;
+		}
+
+		
+
+
+		
+	</style>
+</head>
+<body>
+
+
+
+		
+	<div>
+		<table id="menuTable">
+				<tr>
+					<th class = "menuX">X</th> 
+					<th class = "menuY">Y</th>
+				</tr>				
+		        <td>  <input id="inputCountColumns" type="number" placeholder="Количество столбцов"> </td>
+				<td> <input id="inputCountRows" type="number" placeholder="Количество строк"> </td>
+				<td> <button id="buttonSet">Применить</button> </td>
+				<td> <button id="buttonShow">Показать</button> </td>
+				<td> <button id="buttonClear" >Очистить</button> </td>
+		</table>	
+	</div>	
+
+
+
+
+	<div id = "absTable"> <!-- Таблица ввода значений -->
+		<div id="frame" class="caption">
+
+			<div id="nameOfTable"><td>Таблица для ввода значений</td></div>
+				<div id="mainTable" > 
+						
+					<table style="display: flex";> 
+
+								<tr>
+									<th id="yTable"> Y</th> <th id=xTable>X</th>
+								</tr>	
+								<td>
+									<table id="tableY"></table>
+								</td>
+								<td>	
+									<table id="table"></table>
+								</td>	
+					</table>	
+				</div>
+		</div>		
+
+
+		<div>
+			<td>
+				<button id="buttonToCreateNewTables">Создать таблицы</button>
+			</td>		
+		</div>	
+	</div>
+
+
+
+
+	<div id="createdTableYk"> <!-- Новая таблица Yk -->
+		<table>			
+				<td>
+					<table id="innerCreatedTableYk"></table>
+				</td>			
+		</table>	
+	</div>
+
+	<div id="createdTableXi"> <!-- Новая таблица Xk -->
+		<table>			
+				<td>
+					<table id="innerCreatedTableXi"></table>
+				</td>			
+		</table>	
+	</div>
+
+
+	<div>
+		<canvas id="canvas1"></canvas>
+	</div>			
+
+	
+
+				
+
+
+	<script src="builder.js" type="text/javascript"></script>
+	<script src="YkTable.js" type="text/javascript"></script>
+	<script src="XiTable.js" type="text/javascript"></script>
+	<script src="main.js" type="text/javascript"></script>	
+</body>
+</html>
